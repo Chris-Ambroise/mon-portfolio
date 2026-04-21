@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio de Chris Ambroise" />
     <title>Portfolio — Chris Ambroise</title>
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.png" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -13,4 +13,105 @@
 
     <script src="assets/js/script.js"></script>
   </body>
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <!-- Votre prénom/logo — remplacez le texte -->
+      <a href="#hero" class="nav-logo">Chris Ambroise<span>.</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Bouton burger pour mobile (3 traits) -->
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-subtitle">Bonjour, je suis</p>
+      <h1 class="hero-title">Chris <span class="highlight">Ambroise</span></h1>
+      <p class="hero-role">Futur développeur web</p>
+      <p class="hero-description">
+        [2 phrases qui vous décrivent — soyez authentique]
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn-outline">Me contacter</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <!-- Votre photo — en attendant utilisez picsum.photos -->
+      <img
+        src="https://picsum.photos/400/400?random=1"
+        alt="Photo de Chris Ambroise"
+        class="profile-photo"
+      />
+    </div>
+  </section>
+  <section id="about">
+    <h2>À propos</h2>
+    <p>
+      Je suis actuellement en formation Préqualification aux métiers du
+      numérique à l’AFPA. Je développe des compétences en systèmes et réseaux,
+      avec un intérêt particulier pour la cybersécurité.
+    </p>
+
+    <ul>
+      <li>2 OS installés (Windows / Ubuntu)</li>
+      <li>5+ machines virtuelles créées</li>
+      <li>10+ commandes Linux utilisées</li>
+      <li>Formation en cours</li>
+    </ul>
+  </section>
+  <section id="skills">
+    <h2>Compétences</h2>
+
+    <ul>
+      <li>Linux : 70%</li>
+      <li>VirtualBox : 80%</li>
+      <li>Installation Windows / Ubuntu : 75%</li>
+      <li>Commandes terminal : 65%</li>
+      <li>Réseaux (bases) : 60%</li>
+    </ul>
+  </section>
+  <section id="projects">
+    <h2>Projets</h2>
+
+    <article>
+      <h3>Installation Windows 11 VM</h3>
+      <p>
+        Installation de Windows 11 sur VirtualBox avec contournement TPM et
+        Secure Boot.
+      </p>
+    </article>
+
+    <article>
+      <h3>Ubuntu + commandes Linux</h3>
+      <p>
+        Utilisation de commandes comme ls, cd, ping, apt pour gérer le système.
+      </p>
+    </article>
+
+    <article>
+      <h3>Serveur Apache local</h3>
+      <p>Installation et test d’un serveur web Apache en local sur Ubuntu.</p>
+    </article>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <p>Email : chrisambroise1994@gmail.com</p>
+    <p>Ville : Brest</p>
+    <p>LinkedIn : linkedin.com/in/tonprofil</p>
+  </section>
+  <footer>
+  <p>Chris Ambroise - 2026</p>
+</footer>
 </html>
