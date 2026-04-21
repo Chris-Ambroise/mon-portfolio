@@ -1,23 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio de Chris Ambroise" />
-    <title>Portfolio — Chris Ambroise</title>
-    <link rel="icon" href="favicon.png" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <!-- Votre contenu va ici -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Portfolio — Chris Ambroise</title>
 
-    <script src="assets/js/script.js"></script>
-  </body>
+  <!--
+  ══════════════════════════════════════════════════════════════════
+  TP MODULE 5 — Mon premier portfolio
+  ══════════════════════════════════════════════════════════════════
+
+  Ce fichier est votre squelette de départ.
+  Chaque section contient des commentaires qui expliquent QUOI faire
+  et POURQUOI — à vous de remplir, modifier, personnaliser !
+
+  STRUCTURE DU FICHIER :
+  ├── <head>         → Métadonnées, CSS lié
+  ├── <header>       → Navigation fixe en haut
+  ├── <section#hero> → Votre accroche principale
+  ├── <section#about>→ Qui êtes-vous ?
+  ├── <section#skills>→ Vos compétences
+  ├── <section#projects>→ Vos projets
+  ├── <section#contact>→ Formulaire de contact
+  ├── <footer>       → Bas de page
+  └── <script>       → JavaScript en fin de fichier
+  ══════════════════════════════════════════════════════════════════
+  -->
+
+  <!-- Lien vers votre fichier CSS — le chemin est relatif -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!--
+  RESSOURCES IMAGES — si vous n'avez pas encore vos photos :
+  • Placeholder neutre : https://placehold.co/400x400
+  • Photo aléatoire    : https://picsum.photos/400/400
+  • Photos libres      : https://www.pexels.com / https://unsplash.com
+  -->
+
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVIGATION — barre fixe en haut de page
+       • Elle reste visible quand on fait défiler (position: fixed en CSS)
+       • Le menu "burger" apparaît sur mobile (géré en JS)
+  ═══════════════════════════════════════════════════════════════ -->
   <header class="navbar" id="navbar">
     <nav class="nav-container">
-      <!-- Votre prénom/logo — remplacez le texte -->
+
+      <!-- Votre logo ou votre prénom — remplacez le texte -->
       <a href="#hero" class="nav-logo">Chris Ambroise<span>.</span></a>
 
+      <!-- Liens de navigation — les # pointent vers les sections de la page -->
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">À propos</a></li>
         <li><a href="#skills">Compétences</a></li>
@@ -25,31 +59,61 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <!-- Bouton burger pour mobile (3 traits) -->
+      <!-- Bouton burger pour mobile — les 3 traits sont créés en CSS -->
+      <!-- Le JS l'activera au clic pour ouvrir/fermer le menu -->
       <button class="burger" id="burger" aria-label="Menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
+
     </nav>
   </header>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO — la première chose que le visiteur voit
+       • Votre accroche : qui vous êtes en une phrase
+       • Photo ou illustration
+       • Bouton qui fait défiler vers vos projets
+  ═══════════════════════════════════════════════════════════════ -->
   <section class="hero" id="hero">
     <div class="hero-content">
+
+      <!-- Texte d'accroche — modifiez ces trois lignes -->
       <p class="hero-subtitle">Bonjour, je suis</p>
-      <h1 class="hero-title">Chris <span class="highlight">Ambroise</span></h1>
-      <p class="hero-role">Développeur web en formation</p>
-      <p class="hero-description">
-        Je découvre le développement web à travers la création de sites simples,
-        clairs et fonctionnels. Mon objectif est de développer de vraies
-        compétences techniques et d’évoluer dans le numérique.
+      <h1 class="hero-title">
+        <!-- Votre prénom et nom ici -->
+        Chris Ambroise <span class="highlight">Tshibangu</span>
+      </h1>
+      <p class="hero-role">
+        <!-- Votre rôle ou ce que vous visez : Développeur web · Technicien IT... -->
+        Apprenant en développement web et numérique
       </p>
+      <p class="hero-description">
+        <!--
+        Une ou deux phrases sur vous.
+        Exemple : "Passionné par le web et les nouvelles technologies,
+        je construis des interfaces modernes et accessibles."
+        -->
+        Je suis actuellement en formation Préqualification aux métiers du numérique à l’AFPA.
+  J’apprends à créer des pages web et à développer mes compétences dans le numérique.
+      </p>
+
+      <!-- Boutons d'action -->
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary">Voir mes projets</a>
         <a href="#contact" class="btn btn-outline">Me contacter</a>
       </div>
+
     </div>
+
     <div class="hero-image">
-      <!-- Votre photo — en attendant utilisez picsum.photos -->
+      <!--
+      Remplacez src par votre propre photo.
+      En attendant, picsum.photos génère une belle photo aléatoire.
+      La taille 400x400 est recommandée pour une photo de profil.
+      -->
       <img
         src="https://picsum.photos/400/400?random=1"
         alt="Photo de Chris Ambroise"
@@ -57,63 +121,421 @@
       />
     </div>
   </section>
-  <section id="about">
-    <h2>À propos</h2>
-    <p>
-      Ce portfolio est une première étape dans mon parcours en développement
-      web. Il me permet de montrer ce que j’apprends, les outils que j’utilise
-      et les projets simples que je réalise en formation.
-    </p>
 
-    <ul>
-      <li>HTML : bases acquises</li>
-      <li>CSS : mise en page en cours</li>
-      <li>JavaScript : découverte</li>
-      <li>Git et GitHub utilisés</li>
-    </ul>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       À PROPOS — qui êtes-vous vraiment ?
+       • Votre parcours en quelques lignes
+       • Quelques chiffres ou faits marquants
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <h2 class="section-title">À propos<span class="highlight">de moi</span></h2>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+          <!--
+          Racontez votre histoire en 3-5 phrases.
+          D'où venez-vous ? Pourquoi le numérique ?
+          Qu'est-ce qui vous motive ?
+          -->
+          <p>
+            Je viens d’un parcours où j’ai décidé de me réorienter vers le numérique pour construire un avenir dans l’informatique.
+J’ai choisi ce domaine parce que j’ai toujours été curieux de comprendre comment fonctionnent les systèmes et la technologie.
+Aujourd’hui, je me forme à l’AFPA et j’apprends le développement web, Linux et les bases des réseaux.
+          </p>
+          <p>
+            Le projet de présentation du métier d’administrateur systèmes et réseaux m’a permis de mieux comprendre ce domaine et ses missions. 
+          </p>
+
+          <!-- Lien vers un CV PDF — mettez votre propre lien -->
+          <a href="https://www.canva.com/design/DAHGRD5JQSs/_OGsYbT33uzldm3smJIrEA/edit" class="btn btn-primary" download>
+            Télécharger mon CV
+          </a>
+        </div>
+
+        <!-- Quelques stats ou faits — modifiez les chiffres et labels -->
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Compétences web</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Projets réalisés</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Motivé</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Curiosité</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
-  <section id="skills">
-    <h2>Compétences</h2>
 
-    <ul>
-      <li>HTML : 75%</li>
-      <li>CSS : 60%</li>
-      <li>JavaScript : 35%</li>
-      <li>Git / GitHub : 50%</li>
-      <li>VS Code : 70%</li>
-    </ul>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       COMPÉTENCES — vos skills avec barres de progression
+       • Les barres sont animées en CSS au chargement
+       • Le pourcentage est défini dans l'attribut data-level
+       • Ajoutez ou supprimez des blocs .skill-item selon vos besoins
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="skills" id="skills">
+    <div class="container">
+
+      <h2 class="section-title">Mes <span class="highlight">compétences</span></h2>
+
+      <div class="skills-grid">
+
+        <!-- Catégorie 1 -->
+        <div class="skill-category">
+          <h3>Développement web</h3>
+
+          <!--
+          data-level = le pourcentage de la barre (0 à 100)
+          Modifiez les noms et les pourcentages selon votre niveau réel.
+          Soyez honnête — un recruteur peut vérifier !
+          -->
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">HTML</span>
+              <span class="skill-percent">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="75"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">CSS</span>
+              <span class="skill-percent">60%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="60"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">JavaScript</span>
+              <span class="skill-percent">40%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="40"></div>
+            </div>
+          </div>
+
+        </div><!-- fin .skill-category -->
+
+        <!-- Catégorie 2 — modifiez selon vos compétences -->
+        <div class="skill-category">
+          <h3>Systèmes &amp; réseaux</h3>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Windows / Linux</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="80"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">Réseaux TCP/IP</span>
+              <span class="skill-percent">55%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="55"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">VS Code</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-level="80"></div>
+            </div>
+          </div>
+
+        </div><!-- fin .skill-category -->
+
+      </div><!-- fin .skills-grid -->
+    </div>
   </section>
-  <section id="projects">
-    <h2>Projets</h2>
 
-    <article>
-      <h3>Page de présentation</h3>
-      <p>
-        Réalisation d’une page web simple avec une structure claire, un menu de
-        navigation et des sections organisées.
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PROJETS — vos réalisations sous forme de cartes
+       • Chaque carte a une image, un titre, des tags et des liens
+       • L'effet hover révèle une description (CSS overlay)
+       • Dupliquez le bloc .project-card pour ajouter des projets
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="projects" id="projects">
+    <div class="container">
+
+      <h2 class="section-title">Mes <span class="highlight">projets</span></h2>
+      <p class="section-subtitle">
+        Quelques réalisations et travaux pendant ma formationtion
       </p>
-    </article>
 
-    <article>
-      <h3>Ubuntu + commandes Linux</h3>
-      <p>
-        Utilisation de commandes comme ls, cd, ping, apt pour gérer le système.
+      <div class="projects-grid">
+
+        <!-- Projet 1 — remplacez le contenu -->
+        <div class="project-card">
+          <div class="project-image">
+            <!--
+            Remplacez par une capture d'écran de votre projet.
+            Taille recommandée : 600x400px
+            -->
+            <img
+              src="https://picsum.photos/600/400?random=10"
+              alt="Projet 1 — portfolio personnel"
+            />
+            <!-- Overlay qui apparaît au survol -->
+            <div class="project-overlay">
+              <p class="project-description">
+            
+            Création de mon premier portfolio en HTML, CSS et JavaScript pour présenter mon profil,
+              mes compétences et mes projets.
+              </p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le code</a>
+                <a href="#" class="btn btn-small btn-outline">Démo live</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Portfolio personnel</h3>
+            <div class="project-tags">
+              <!-- Ajoutez les technologies utilisées -->
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div><!-- fin .project-card -->
+
+        <!-- Projet 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://picsum.photos/600/400?random=20"
+              alt="Projet 2 —  Présentation du métier"
+            />
+            <div class="project-overlay">
+              <p class="project-description">
+                Projet de présentation sur le métier d’administrateur systèmes et réseaux,
+              qui m’a permis de mieux comprendre les missions et les compétences de ce domaine.
+              </p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le code</a>
+                <a href="#" class="btn btn-small btn-outline">Démo live</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">[Nom du projet 2]</h3>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://picsum.photos/600/400?random=30"
+              alt="Projet 3 — [nom du projet]"
+            />
+            <div class="project-overlay">
+              <p class="project-description">
+                [Description de votre troisième projet.]
+              </p>
+              <div class="project-links">
+                <a href="#" class="btn btn-small">Voir le code</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">[Nom du projet 3]</h3>
+            <div class="project-tags">
+              <span class="tag">Réseau</span>
+              <span class="tag">CISCO</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- fin .projects-grid -->
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CONTACT — formulaire simple
+       • Les champs sont validés en JavaScript avant envoi
+       • Sans backend, le formulaire affiche juste un message de succès
+       • Pour un vrai envoi, il faudra un service comme Formspree.io
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <h2 class="section-title">Me <span class="highlight">contacter</span></h2>
+      <p class="section-subtitle">
+        Une question ? Une opportunité ? N'hésitez pas !
       </p>
-    </article>
 
-    <article>
-      <h3>Serveur Apache local</h3>
-      <p>Installation et test d’un serveur web Apache en local sur Ubuntu.</p>
-    </article>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
+      <div class="contact-grid">
 
-    <p>Email : chrisambroise1994@gmail.com</p>
-    <p>Ville : Brest</p>
-    <p>LinkedIn : linkedin.com/in/tonprofil</p>
+        <!-- Informations de contact -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div>
+              <h4>Email</h4>
+              <!-- Remplacez par votre email -->
+              <p>votre.email@exemple.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Localisation</h4>
+              <!-- Votre ville -->
+              <p>brest, France</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <div>
+              <h4>LinkedIn</h4>
+              <!-- Votre profil LinkedIn -->
+              <p><a href="https://github.com/Chris-Ambroise">linkedin.com/in/votreprofil</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire -->
+        <!--
+        NOTE : on n'utilise pas <form action="..."> car on valide en JS.
+        Pour un vrai envoi d'email, inscrivez-vous sur formspree.io
+        et remplacez action="#" par votre URL Formspree.
+        -->
+        <form class="contact-form" id="contact-form" novalidate>
+
+          <div class="form-group">
+            <label for="name">Votre nom</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Prénom Nom"
+              required
+            />
+            <!-- Le message d'erreur est affiché/caché par JS -->
+            <span class="error-message" id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Votre email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="vous@exemple.com"
+              required
+            />
+            <span class="error-message" id="email-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Objet de votre message"
+              required
+            />
+            <span class="error-message" id="subject-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Votre message ici..."
+              required
+            ></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            Envoyer le message
+          </button>
+
+          <!-- Message de succès — caché par défaut, visible après envoi -->
+          <div class="success-message" id="success-message">
+            ✅ Message envoyé ! Je vous répondrai sous 48h.
+          </div>
+
+        </form>
+
+      </div><!-- fin .contact-grid -->
+    </div>
   </section>
-  <footer>
-    <p>Chris Ambroise - 2026</p>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER — bas de page
+  ═══════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <!-- Remplacez par votre prénom et l'année en cours -->
+        © 2026 <span class="highlight">[Votre Prénom Nom]</span>
+        — Portfolio réalisé en HTML/CSS/JS
+      </p>
+      <!-- Liens vers vos profils — ajoutez ou supprimez -->
+      <div class="footer-links">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
   </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       BOUTON "RETOUR EN HAUT"
+       Apparaît quand on scrolle — géré en JS
+  ═══════════════════════════════════════════════════════════════ -->
+  <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+    ↑
+  </button>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       JAVASCRIPT — toujours en fin de body, APRÈS le HTML
+       • Le navigateur charge d'abord le HTML, puis exécute le JS
+       • Si le JS était dans le <head>, il ne trouverait pas les éléments HTML
+  ═══════════════════════════════════════════════════════════════ -->
+  <script src="js/script.js"></script>
+
+</body>
 </html>
