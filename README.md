@@ -35,7 +35,21 @@ Ce site présente mon parcours, mes compétences techniques et les différents p
 
 ## Aperçu
 
-Ajoutez ici des captures d'écran du projet.
+### Page d'accueil
+
+![Page d'accueil](images/home-page.png)
+
+---
+
+### Section Projets
+
+![Section Projets](images/projects.png)
+
+---
+
+### À propos
+
+![À propos](images/about.png)
 
 ---
 
