@@ -28,39 +28,37 @@ PLAN DU FICHIER :
    Essayez de changer --accent-color et voyez l'effet !
 ═══════════════════════════════════════════════════════════════ */
 :root {
-  /* ── Couleurs principales ── */
-  --bg-primary: #0b1120; /* Fond sombre principal */
-  --bg-secondary: #131c31; /* Fond des cartes */
-  --bg-card: #131c31; /* Fond des éléments en relief */
+  --bg-primary: #0f172a;
+  --bg-secondary: #111827;
+  --bg-card: #1e293b;
 
-  --accent-color: #06b6d4; /* Violet — votre couleur signature */
-  --accent-light: #67e8f9; /* Violet clair — pour les textes sur fond sombre */
-  --accent-teal: #22c55e; /* Teal — couleur secondaire */
+  --accent-color: #7c3aed;
+  --accent-light: #a78bfa;
+  --accent-blue: #38bdf8;
+  --accent-gradient: linear-gradient(135deg, #7c3aed, #38bdf8);
 
-  --text-primary: #f8fafc; /* Texte principal (blanc cassé) */
-  --text-secondary: #94a3b8; /* Texte secondaire (gris) */
-  --text-muted: #64748b; /* Texte discret */
+  --accent-teal: #38bdf8;
 
-  --border-color: #24324a; /* Couleur des bordures */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
 
-  /* ── Typographie ── */
+  --border-color: #334155;
+
   --font-main: "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-code: "Consolas", "Courier New", monospace;
 
-  /* ── Espacements ── */
-  --spacing-xs: 0.5rem; /*  8px */
-  --spacing-sm: 1rem; /* 16px */
-  --spacing-md: 2rem; /* 32px */
-  --spacing-lg: 4rem; /* 64px */
-  --spacing-xl: 6rem; /* 96px */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
 
-  /* ── Rayons des coins arrondis ── */
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
-  --radius-full: 9999px; /* Pilule / cercle */
+  --radius-full: 9999px;
 
-  /* ── Transitions ── */
   --transition: 0.3s ease;
 }
 
@@ -140,10 +138,28 @@ ul {
   margin-bottom: var(--spacing-lg);
   font-size: 1.1rem;
 }
+/* Tags de technologie */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tech-stack span {
+  background: rgba(124, 58, 237, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
 
 /* Texte en couleur accent */
 .highlight {
-  color: var(--accent-light);
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ── Boutons ── */
@@ -162,15 +178,15 @@ ul {
 
 /* Bouton plein (principal) */
 .btn-primary {
-  background-color: var(--accent-color);
+  background: var(--accent-gradient);
   color: white;
-  border-color: var(--accent-color);
+  border-color: transparent;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.35);
 }
+
 .btn-primary:hover {
-  background-color: #0891b2;
-  border-color: #0891b2;
-  transform: translateY(-2px); /* léger soulèvement au survol */
-  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(124, 58, 237, 0.5);
 }
 
 /* Bouton contour */
@@ -180,8 +196,9 @@ ul {
   border-color: var(--accent-color);
 }
 .btn-outline:hover {
-  background-color: var(--accent-color);
+  background: var(--accent-gradient);
   color: white;
+  border-color: transparent;
   transform: translateY(-2px);
 }
 
@@ -348,7 +365,8 @@ ul {
 .hero-description {
   color: var(--text-secondary);
   font-size: 1.1rem;
-  max-width: 500px;
+  max-width: 650px;
+  line-height: 1.8;
   margin-bottom: var(--spacing-md);
 }
 
@@ -363,12 +381,19 @@ ul {
 }
 
 .profile-photo {
-  width: 320px;
-  height: 320px;
-  object-fit: cover; /* recadre l'image pour remplir le cercle */
-  border-radius: 50%; /* cercle parfait */
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 50%;
   border: 4px solid var(--accent-color);
-  box-shadow: 0 0 40px rgba(124, 58, 237, 0.4);
+  box-shadow:
+    0 0 30px rgba(124, 58, 237, 0.45),
+    0 0 70px rgba(56, 189, 248, 0.25);
+  transition: transform 0.4s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.03);
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -782,6 +807,30 @@ textarea.invalid {
 }
 .reveal-delay-3 {
   transition-delay: 0.3s;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+    12.1. ANIMATIONS — arrière-plan animé
+    Des dégradés circulaires apparaissent derrière le contenu
+    pour un effet visuel subtil (CSS pur, pas d'image)
+═══════════════════════════════════════════════════════════════ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(124, 58, 237, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(56, 189, 248, 0.08),
+      transparent 35%
+    );
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* ═══════════════════════════════════════════════════════════════
