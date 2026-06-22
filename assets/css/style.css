@@ -28,16 +28,15 @@ PLAN DU FICHIER :
    Essayez de changer --accent-color et voyez l'effet !
 ═══════════════════════════════════════════════════════════════ */
 :root {
-  --bg-primary: #0f172a;
-  --bg-secondary: #111827;
-  --bg-card: #1e293b;
+  --bg-primary: #070b18;
+  --bg-secondary: #0f172a;
+  --bg-card: #111827;
 
-  --accent-color: #7c3aed;
-  --accent-light: #a78bfa;
+  --accent-color: #8b5cf6;
+  --accent-light: #c4b5fd;
   --accent-blue: #38bdf8;
-  --accent-gradient: linear-gradient(135deg, #7c3aed, #38bdf8);
-
   --accent-teal: #38bdf8;
+  --accent-gradient: linear-gradient(135deg, #8b5cf6, #38bdf8);
 
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
@@ -147,12 +146,20 @@ ul {
 }
 
 .tech-stack span {
-  background: rgba(124, 58, 237, 0.15);
+  background: rgba(139, 92, 246, 0.15);
   color: #c4b5fd;
-  border: 1px solid rgba(124, 58, 237, 0.4);
+  border: 1px solid rgba(139, 92, 246, 0.45);
   padding: 8px 14px;
   border-radius: 999px;
   font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tech-stack span:hover {
+  transform: translateY(-5px);
+  background: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.45);
 }
 
 /* Texte en couleur accent */
@@ -387,10 +394,10 @@ ul {
   height: 340px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid var(--accent-color);
+  border: 5px solid var(--accent-color);
   box-shadow:
-    0 0 30px rgba(124, 58, 237, 0.45),
-    0 0 70px rgba(56, 189, 248, 0.25);
+    0 0 40px rgba(139, 92, 246, 0.65),
+    0 0 90px rgba(56, 189, 248, 0.25);
   transition: transform 0.4s ease;
 }
 
